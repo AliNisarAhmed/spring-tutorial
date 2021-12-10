@@ -1,5 +1,11 @@
-package academy.learnprogramming;
+package academy.learnprogramming.config;
 
+import academy.learnprogramming.Game;
+import academy.learnprogramming.GameImpl;
+import academy.learnprogramming.MessageGenerator;
+import academy.learnprogramming.MessageGeneratorImpl;
+import academy.learnprogramming.NumberGenerator;
+import academy.learnprogramming.NumberGeneratorImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -7,8 +13,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
+@Import(GameConfig.class)
 @ComponentScan(basePackages="academy.learnprogramming")
 public class AppConfig {
 
